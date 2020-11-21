@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".Input_LinesPlot">
+
+    <EditText
+        android:id="@+id/edtPoint"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint="Input Point"
+        android:inputType="number"
+        />
+
+    <Button
+        android:onClick="CreateList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/edtPoint"
+        android:text="Create List"
+        />
+
+    <TextView
+        android:id="@+id/txtValueX"
+        android:text="List Value X:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPoint"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerValueX"
+        android:layout_below="@id/txtValueX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/txtValueY"
+        android:text="List Value Y:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerValueX"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerValueY"
+        android:layout_below="@id/txtValueY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btnDraw"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerValueY"
+        android:text="Draw"
+        android:onClick="draw"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
